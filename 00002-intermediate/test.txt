@@ -1,0 +1,37 @@
+@ START
+>An army of zombies is approaching your house. What will you do?
+- B - BACK_DOOR - LEAVE FROM THE BACK DOOR
+- F - FRONT_DOOR - LEAVE FROM THE FRONT DOOR
+- D - DEFEND - STAY AND DEFEND YOUR HOUSE
+
+This and any other line that doesn't start with a command symbol is a comment.
+@ BACK_DOOR
+> You exited your house from the back door. What will you do?
+- R - RIGHT - GO RIGHT
+- L - LEFT - GO LEFT
+
+@ RIGHT
+= DIE
+
+@ LEFT
+= DIE
+
+@ FRONT_DOOR
+> You exited your house through the front door, the zombies are everywhere!
+= DIE
+
+@ DEFEND
+> How do you want to defend your home?
+- K - KNIFE - USE A KNIFE
+- S - SHOTGUN - USE A SHOTGUN
+
+@ KNIFE
+> The zombies are too many.
+= DIE
+
+@ SHOTGUN
+> You take the shotgun.
+= DIE
+
+@ DIE
+> You die.
