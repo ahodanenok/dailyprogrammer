@@ -1,0 +1,7 @@
+Einstein : Feynmann
+Feynmann : Gell-Mann
+Gell-Mann : Thorne
+Einstein : Lorentz
+Lorentz : Planck
+Hilbert : Noether
+Poincare : Noether
