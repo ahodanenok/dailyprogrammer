@@ -1,0 +1,8 @@
+3
+ASCII-order-ignore-case
+reverse-ASCII-order
+a-z 0-9 ASCII-order A-Z
+The Cat in the Hat
+the Rain in Spain
+The RAIN in Spain
+Beavis and Butthead
