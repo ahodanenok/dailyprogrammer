@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Dailyprogrammer: 29 - Intermediate</title>
+</head>
+<body>
+    <form id="dataForm" method="POST" action="data">
+        <div>
+            <select name="submitType">
+                <option value="post">POST</option>
+                <option value="ws">WEBSOCKET</option>
+            </select>
+        </div>
+
+        <div>
+            <textarea name="data"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+    
+    <script>
+        (function () {
+            document.forms.dataForm.submitType.disabled = true;
+
+            var ws = new WebSocket('ws://' + window.location.host + window.location.pathname + 'data');
+            ws.onopen = function () {
+                document.forms.dataForm.submitType.disabled = false;
+            };
+
+            document.forms.dataForm.onsubmit = function(event) {
+                console.log(document.forms.dataForm.submitType.value);
+                if (document.forms.dataForm.submitType.value === 'post') {
+                    return true;
+                } else {
+                    event.preventDefault();
+                    ws.send(document.forms.dataForm.data.value);
+                    document.forms.dataForm.data.value = '';
+                }
+            };
+        })();
+    </script>
+</body>
+</html>
